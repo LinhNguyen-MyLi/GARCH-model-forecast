@@ -10,5 +10,6 @@ I highly recommend you read it before dive in
 - white noise process contains a sequence of random variables that cannot be predicted. A time series is white noise if the variables are independent and identically distributed with a mean of zero.
 - A residual is the difference between the observed value of a variable at time t and its predicted value based on information available prior to time t. If the prediction model is working properly, successive residuals are uncorrelated with each other, that is, they constitute a white noise time series
 ![obraz](https://user-images.githubusercontent.com/128978862/234522420-c4147f2f-7816-442b-bd88-e986607082c0.png)
+![obraz](https://user-images.githubusercontent.com/128978862/234523164-a8e7cc21-0b1f-4708-a7e1-7b35f8828c83.png)
 
 Note: Don't confuse rolling window forecast with Moving average. Although both of them are used in GARCH model, Rolling window forecast is a technique used for forecasting, whereas moving averages are used for smoothing and trend identification in time series analysis.
