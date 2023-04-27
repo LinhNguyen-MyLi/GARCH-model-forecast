@@ -9,7 +9,16 @@ I highly recommend you read it before dive in
 - Volatility index (VIX), derived from S&P 500 option prices, is a parameter of the US stock market expected volatility and risk sentiment. It demonstrates "volatility clustering", that is, periods of high or low volatility tend to persist. Large price changes are very likely to be followed by more large changes, and vice versa. Volatility clustering happens because markets tend to respond to new information shocks with dramatic price movement, and it takes time for the shocking effect to resolve and dissipate.
 - white noise process contains a sequence of random variables that cannot be predicted. A time series is white noise if the variables are independent and identically distributed with a mean of zero.
 - A residual is the difference between the observed value of a variable at time t and its predicted value based on information available prior to time t. If the prediction model is working properly, successive residuals are uncorrelated with each other, that is, they constitute a white noise time series
-![obraz](https://user-images.githubusercontent.com/128978862/234522420-c4147f2f-7816-442b-bd88-e986607082c0.png)
-![obraz](https://user-images.githubusercontent.com/128978862/234523164-a8e7cc21-0b1f-4708-a7e1-7b35f8828c83.png)
+- The GARCH model parameters omega, alpha, beta are estimated using the "maximum likelihood method". It means: the fitting process tries to find parameter values for which the GARCH model is most likely to have generated the observed time series data
+
+**Revision some important formula:**
+Note: 'u' in below formula stand for rate of return and rate of return will be treated as the residuals (eplsilon ε) in a GARCH model - this is a common approach in finance.
+![obraz](https://user-images.githubusercontent.com/128978862/234706944-8c9d079f-6e00-4b86-9c24-b77b40c91281.png)
+![obraz](https://user-images.githubusercontent.com/128978862/234707286-f9226d70-b43c-43b4-ad36-4b05c82b149e.png)
+
+
+
+
 
 Note: Don't confuse rolling window forecast with Moving average. Although both of them are used in GARCH model, Rolling window forecast is a technique used for forecasting, whereas moving averages are used for smoothing and trend identification in time series analysis.
+Preference: Financial Engineering in the project development, Prof.Zbigniew Krysiak, Szkoła Główna Handlowa w Warszawie (SGH)
