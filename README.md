@@ -13,12 +13,14 @@ I highly recommend you read it before dive in
 
 **Revision some important formula:**
 Note: 'u' in below formula stand for rate of return and rate of return will be treated as the residuals (eplsilon ε) in a GARCH model - this is a common approach in finance.
+
 ![obraz](https://user-images.githubusercontent.com/128978862/234706944-8c9d079f-6e00-4b86-9c24-b77b40c91281.png)
-![obraz](https://user-images.githubusercontent.com/128978862/234707286-f9226d70-b43c-43b4-ad36-4b05c82b149e.png)
+![obraz](https://user-images.githubusercontent.com/128978862/235201621-7e1bd426-73e3-46ab-b48f-713d4a01b6aa.png)
 
 
 
-
+You can set update_freq with higher value if your dataset is bigger.
+For practice purpose I still included normal distribution assumption of the standardized residuals in this model. However, the use of its in GARCH models are not representative of the real financial world. Fat tails and skewness are frequently observed in financial return data.
 
 Note: Don't confuse rolling window forecast with Moving average. Although both of them are used in GARCH model, Rolling window forecast is a technique used for forecasting, whereas moving averages are used for smoothing and trend identification in time series analysis.
 Preference: Financial Engineering in the project development, Prof.Zbigniew Krysiak, Szkoła Główna Handlowa w Warszawie (SGH)
