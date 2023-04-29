@@ -1,7 +1,7 @@
 # GARCH-model-forecast
 
 **Introduction:** An exciting part of financial modeling is making predictions!. In this project, I'm going to use rolling window forecast in GARCH model - repeadtedly perform model fitting and forecast as time roll forward. In simple words, we have 200 observations of a time-series. First, we estimate the model with the first 100 observations to forecast the data point 101. Then we include observation 101 into the sample, and estimate the model again to forecast the data point 102.
-GARCH is a popular approach to model volatility in financial time series data
+GARCH is a popular approach to model volatility in financial time series data.
 
 **Definition of some terms:**
 I highly recommend you read it before dive in
