@@ -18,9 +18,25 @@ Note: 'u' in below formula stand for rate of return and rate of return will be t
 ![obraz](https://user-images.githubusercontent.com/128978862/235201621-7e1bd426-73e3-46ab-b48f-713d4a01b6aa.png)
 
 
+**Note:**
+- Since it a time series data, it's important to specify 'Shuffle=False' in split data (the data order won't be messed up when it's splitted)
+- You can set update_freq with higher value if your dataset is bigger.
+- For practice purpose I still included normal distribution assumption of the standardized residuals in this model. However, the use of its in GARCH models are not representative of the real financial world. Fat tails and skewness are frequently observed in financial return data.
 
-You can set update_freq with higher value if your dataset is bigger.
-For practice purpose I still included normal distribution assumption of the standardized residuals in this model. However, the use of its in GARCH models are not representative of the real financial world. Fat tails and skewness are frequently observed in financial return data.
+
+Use a hypothesis test to help decide whether to keep or drop a model parameter. Hypothesis test is a statistical way to verify a claim, also known as the "null hypothesis or H0, that is made about a population using the sample data. The alternative hypothesis is the one we would accept if the null hypothesis is concluded to be untrue. In our case, the null hypothesis is: a parameter value is 0. If H0 cannot be rejected, we should leave the parameter out of the GARCH model.
+4. Statistical significance
+
+We can conduct tests of statistical significance to determine whether to accept or reject the null hypothesis. As a general rule, the significance level is commonly set to 0.05, meaning that the probability of observing the results in our data by chance is just 5%.
+
+5. P-value
+
+From a statistical significance test, we can obtain the p-value, which is used to compare with the predefined significance level to decide whether to reject or accept the null hypothesis. P-value is the probability value of obtaining the observed results of a test, assuming that the null hypothesis is true. It tells us what the odds are that the results could have happened by chance. The lower the p-value, the more surprising the evidence is, the more ridiculous our null hypothesis looks. In other words, reject the null hypothesis if the p-value is smaller than the specified significance level, such as 5%. 
+As a rule of thumb, if the absolute value of the t-statistic is larger than 2, the null hypothesis should be rejected.
+
+
+
+
 
 Note: Don't confuse rolling window forecast with Moving average. Although both of them are used in GARCH model, Rolling window forecast is a technique used for forecasting, whereas moving averages are used for smoothing and trend identification in time series analysis.
 Preference: Financial Engineering in the project development, Prof.Zbigniew Krysiak, Szkoła Główna Handlowa w Warszawie (SGH)
