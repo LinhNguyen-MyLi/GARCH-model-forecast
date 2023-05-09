@@ -25,11 +25,16 @@ Note: 'u' in below formula stand for rate of return and rate of return will be t
 - You can set update_freq with higher value if your dataset is bigger.
 - For practice purpose I still included normal distribution assumption of the standardized residuals in this model. However, the use of its in GARCH models are not representative of the real financial world. Fat tails and skewness are frequently observed in financial return data.
 
+**Structure:**
+A. Install package, modul and Preprocessing data
+B. Split data into train and test 
+C. Fit GARCH(1,1) model with normal distribution and skewt t-distribution
+
+
+
 Rolling window forecast - repeadtedly perform model fitting and forecast as time roll forward. In simple words, we have 200 observations of a time-series. First, we estimate the model with the first 100 observations to forecast the data point 101. Then we include observation 101 into the sample, and estimate the model again to forecast the data point 102
 
-
-
-Use a hypothesis test to help decide whether to keep or drop a model parameter. Hypothesis test is a statistical way to verify a claim, also known as the "null hypothesis or H0, that is made about a population using the sample data. The alternative hypothesis is the one we would accept if the null hypothesis is concluded to be untrue. As a general rule, the significance level is commonly set to 0.05, meaning that the probability of observing the results in our data by chance is just 5%. Let put it in simple word, we have a coin that we want to test if it's fair or biased. The null hypothesis would be that the coin is fair, meaning it has an equal chance of landing on heads or tails. The alternative hypothesis would be that the coin is biased, meaning it has a higher probability of landing on one side than the other.
+Use a hypothesis test to decide whether to keep or drop a model parameter. Hypothesis test is a statistical way to verify a claim, also known as the "null hypothesis or H0, that is made about a population using the sample data. The alternative hypothesis is the one we would accept if the null hypothesis is concluded to be untrue. As a general rule, the significance level is commonly set to 0.05, meaning that the probability of observing the results in our data by chance is just 5%. Let put it in simple word, we have a coin that we want to test if it's fair or biased. The null hypothesis would be that the coin is fair, meaning it has an equal chance of landing on heads or tails. The alternative hypothesis would be that the coin is biased, meaning it has a higher probability of landing on one side than the other.
 
 To test this, we could flip the coin a certain number of times and count how many times it lands on heads and tails. Then, we could calculate the probability of getting that result if the coin is fair. If the probability is very low (typically, less than 5%), we would reject the null hypothesis and conclude that the coin is biased. If the probability is not low enough, we would fail to reject the null hypothesis and conclude that we don't have enough evidence to say that the coin is biased.
 
